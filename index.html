@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commit To Win - Bitcoin Competition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">COMMIT TO WIN</h1>
+        </header>
+
+        <main>
+            <section class="welcome">
+                <h2>Welcome to Commit to Win</h2>
+                <p>Commit to Win is a platform that enables users to compete for bitcoin by committing to a GitHub repo.</p>
+            </section>
+
+            <section class="countdown">
+                <h2>🎃 Halloween 2025 Event Countdown</h2>
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">000</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="timing">
+                <h2>⏰ Competition Timeline</h2>
+                <div class="timeline-item">
+                    <strong>Halloween 2025 - 10:00 PM CST</strong> - Repository opens and link is posted
+                </div>
+                <div class="timeline-item">
+                    <strong>Halloween 2025 - 10:05 PM CST</strong> - Repository locks all submissions
+                </div>
+            </section>
+
+            <section class="rules">
+                <h2>🎯 How to Win</h2>
+                <div class="rule-box">
+                    <p>The latest commit on the main branch at the time of locking will win <span class="prize">$100 in Bitcoin</span></p>
+                </div>
+            </section>
+
+            <section class="requirements">
+                <h2>📋 Requirements</h2>
+                <div class="requirement-list">
+                    <div class="requirement">
+                        <span class="bullet">•</span>
+                        Your commit message must be exactly: <code>"commit_to_win"</code>
+                    </div>
+                    <div class="requirement">
+                        <span class="bullet">•</span>
+                        Add a file named <code>address.txt</code> containing only your Bitcoin address
+                    </div>
+                    <div class="requirement">
+                        <span class="bullet">•</span>
+                        The repository has only one branch: <code>main</code> (unprotected)
+                    </div>
+                </div>
+            </section>
+
+            <section class="example">
+                <h2>💡 Working Example</h2>
+                <div class="example-container">
+                    <div class="example-step">
+                        <h3>1. Clone the repository</h3>
+                        <div class="code-block">
+                            <div class="code-header">Git Clone Command</div>
+                            <div class="code-content">git clone [REPO_URL]<br>cd [REPO_NAME]</div>
+                        </div>
+                        <p class="example-text">Repository link will be available at 10:00 PM CST on Halloween 2025</p>
+                    </div>
+                    
+                    <div class="example-step">
+                        <h3>2. Create your file</h3>
+                        <div class="code-block">
+                            <div class="code-header">address.txt</div>
+                            <div class="code-content">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-step">
+                        <h3>3. Make your commit</h3>
+                        <div class="code-block">
+                            <div class="code-header">Git Commands</div>
+                            <div class="code-content">git add address.txt<br>git commit -m "commit_to_win"<br>git push --force origin main</div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-step">
+                        <h3>4. That's it!</h3>
+                        <p class="example-text">The latest commit with message "commit_to_win" wins the $100 Bitcoin prize when the repo locks!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="repo-info">
+                <h2>🔗 Repository Details</h2>
+                <div class="repo-box">
+                    <p><strong>Repository Link:</strong> <span class="coming-soon">Coming Halloween 2025 at 10:00 PM CST</span></p>
+                    <p><strong>Branch:</strong> main (unprotected)</p>
+                    <p><strong>Prize:</strong> $100 Bitcoin transfer to winner's address</p>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-text">
+                    <p>Good luck, and may the fastest commit win!</p>
+                    <div class="status">Status: Waiting for repository link...</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+    
+    <script>
+        // Halloween 2025 - October 31, 2025 at 10:00 PM CST
+        const halloween2025 = new Date('October 31, 2025 22:00:00 CST');
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = halloween2025.getTime() - now;
+            
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(3, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                // Event has started or passed
+                document.getElementById('days').textContent = '000';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                
+                // Update the status
+                const statusElement = document.querySelector('.status');
+                if (statusElement) {
+                    statusElement.textContent = 'Status: Event is live! Repository link available now!';
+                    statusElement.style.color = '#00ff00';
+                    statusElement.style.fontWeight = '600';
+                }
+            }
+        }
+        
+        // Update countdown immediately and then every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
