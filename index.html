@@ -17,12 +17,12 @@
 
         <main>
             <section class="welcome">
-                <h2>Welcome to Commit to Win</h2>
-                <p>Commit to Win is a platform that enables users to compete for bitcoin by committing to a GitHub repo.</p>
+                <h2>Sorry you have been Tricked, the event date has moved to accommodate people Trick or Treating</h2>
+                <p>The date of this event has moved to Tuesday November 4th</p>
             </section>
 
             <section class="countdown">
-                <h2>🎃 Halloween 2025 Event Countdown</h2>
+                <h2>🎃 <s>Halloween</s> 2025 Event Countdown</h2>
                 <div class="countdown-container">
                     <div class="countdown-item">
                         <div class="countdown-number" id="days">000</div>
@@ -46,10 +46,10 @@
             <section class="timing">
                 <h2>⏰ Competition Timeline</h2>
                 <div class="timeline-item">
-                    <strong>Halloween 2025 - 10:00 PM CST</strong> - Repository opens and link is posted
+                    <strong>November 4, 2025 - 10:00 PM CST</strong> - Repository opens and link is posted
                 </div>
                 <div class="timeline-item">
-                    <strong>Halloween 2025 - 10:05 PM CST</strong> - Repository locks all submissions
+                    <strong>November 4, 2025 - 10:05 PM CST</strong> - Repository locks all submissions
                 </div>
             </section>
 
@@ -87,7 +87,7 @@
                             <div class="code-header">Git Clone Command</div>
                             <div class="code-content">git clone [REPO_URL]<br>cd [REPO_NAME]</div>
                         </div>
-                        <p class="example-text">Repository link will be available at 10:00 PM CST on Halloween 2025</p>
+                        <p class="example-text">Repository link will be available at 10:00 PM CST on November 4, 2025</p>
                     </div>
                     
                     <div class="example-step">
@@ -116,7 +116,7 @@
             <section class="repo-info">
                 <h2>🔗 Repository Details</h2>
                 <div class="repo-box">
-                    <p><strong>Repository Link:</strong> <span class="coming-soon">Coming Halloween 2025 at 10:00 PM CST</span></p>
+                    <p><strong>Repository Link:</strong> <span class="coming-soon">Coming November 4, 2025 at 10:00 PM CST</span></p>
                     <p><strong>Branch:</strong> main (unprotected)</p>
                     <p><strong>Prize:</strong> $100 Bitcoin transfer to winner's address</p>
                 </div>
@@ -132,12 +132,12 @@
     </div>
     
     <script>
-        // Halloween 2025 - October 31, 2025 at 10:00 PM CST
-        const halloween2025 = new Date('October 31, 2025 22:00:00 CST');
+        // November 4, 2025 at 10:00 PM CST
+        const eventDate = new Date('November 4, 2025 22:00:00 CST');
         
         function updateCountdown() {
             const now = new Date().getTime();
-            const timeLeft = halloween2025.getTime() - now;
+            const timeLeft = eventDate.getTime() - now;
             
             if (timeLeft > 0) {
                 const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
